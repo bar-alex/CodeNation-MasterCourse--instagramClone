@@ -2,17 +2,19 @@
 // import './App.css';
 // import GridDisplay from './components/GridDisplay';
 
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 // import { useEffect } from "react";
 import useFetch from "../useFetch";
 import PictureCard from "./PictureCard";
 // import HeaderSpace from "./HeaderSpace";
 
+const randomPage = Math.floor(Math.random()*10)+1;
 
 function GridDisplay() {
 
-    const { data, isPending, error } = useFetch(`https://picsum.photos/v2/list?limit=12&page=${Math.floor(Math.random()*10)+1}`);
-
+    // const [ listItems, setListItems ] = useState([]);
+    const { data, isPending, error } = useFetch(`https://picsum.photos/v2/list?limit=12&page=${randomPage}`);    
 
     return (
         <MainDiv>

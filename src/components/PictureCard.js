@@ -28,7 +28,10 @@ const PictureCard = ({author, url}) => {
                 className="img--infra vignette-inset"
                 src={url} 
                 alt={`photographed by ${author}`}/> */}
-            <div id="image" className="img--infra"></div>
+            { Math.floor(Math.random()*2)<1 
+                ? <div id="image" className="img--infra"></div>
+                : <img id="image" src={url} alt="" />
+            }
 
 
             <p id="caption" 
@@ -71,34 +74,35 @@ const CardDiv = styled.div`
         /* height: 300px; width: 300px; */
         height: 290px; width: 290px;
         top: 5px; left: 5px;
+        margin: auto;
         object-fit:cover;
-
-        /* opacity: .8; */
-        /* visibility */
-        /* box-shadow: 0 0 200px rgba(0,0,0,0.9) inset; */
-
-        /* :after{
-            box-shadow: 10 10 15px white inset;
-        }
-        :after :hover{
-            visibility: visible;
-        } */
     }
 
     #caption {
         position: absolute;
         bottom: -10px;
-        width: 100%;
+        left: 7px;
+        /* width: 100%; */
+        width: 288px;
         text-align: center;
         color: white;
         font-size: 1.5em;
+        mix-blend-mode: luminosity;
+        /* mix-blend-mode: invert; */
+        /* mix-blend-mode: hard-light; */
+        height: 40px;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
     }
 
     #like {
         position: absolute;
-        top: 10px; right: 10px;
+        top: 20px; right:20px;
         font-size: 1.8em;
         color: white;
+        mix-blend-mode: difference;
+        /* mix-blend-mode: invert; */
+        /* mix-blend-mode: hard-light; */
+        /* mix-blend-mode: screen; */
     }
 
     .fading {
