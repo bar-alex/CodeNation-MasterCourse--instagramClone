@@ -1,0 +1,6 @@
+registerUser -> post:user {username, email, password} -> {user,token}
+loginUser -> post:login {username, password} -> token
+
+updateUser -> put:user/*username* {email, password}, token
+deleteUser -> delete:user/*username* token
+retrieveUser -> get:user/token
