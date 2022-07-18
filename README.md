@@ -1,5 +1,17 @@
-# Getting Started with Create React App
+# React app build as a clone of the Instagram feed
 
+On refresh, it grabs a random page, with 12 images per page from picsum.photos. 
+
+The photos will be displayed at random in normal colors or with an "infrared" effect on them. The information on applying this effect can be gained from Una Kravets's blog [una.im](https://una.im/)
+
+Uses the API from the repository [CodeNation-MasterCourse--expressREST-API](https://github.com/bar-alex/CodeNation-MasterCourse--expressREST-API) for all user related CRUD operations. 
+
+The project is unfinished. 
+
+## Getting Started with Create React App
+<details>
+  <summary>Click here for details.</summary>
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -68,3 +80,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</details>
